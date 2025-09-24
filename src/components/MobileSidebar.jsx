@@ -10,14 +10,14 @@ export default function MobileSidebar({ open, onClose, logoSrc, brand = 'Dino Be
     <>
       <div className="fixed inset-0 z-40 bg-black/40" onClick={onClose} aria-hidden="true" />
       <div className="fixed left-0 top-0 z-50 h-full w-full bg-white dark:bg-gray-900 shadow-xl">
-        <div className="p-4 border-b border-gray-200 dark:border-gray-800 flex items-center justify-between bg-white dark:bg-gray-900">
+        <div className="px-6 h-16 border-b border-gray-200 dark:border-gray-800 flex items-center justify-between bg-white dark:bg-gray-900">
           <div className="flex items-center gap-3">
             {logoSrc && <img src={logoSrc} alt="شعار" className="h-8 w-8 object-cover rounded-full" />}
-            <span className="text-base font-semibold text-forest-700 dark:text-gray-100">{brand}</span>
+            <span className="text-lg font-semibold text-forest-700 dark:text-gray-100">{brand}</span>
           </div>
           <button
             type="button"
-            className="inline-flex items-center justify-center rounded-md p-2 text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-honey-500 dark:text-gray-300"
+            className="inline-flex items-center justify-center rounded-md text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-honey-500 dark:text-gray-300"
             aria-label="إغلاق"
             onClick={onClose}
           >
