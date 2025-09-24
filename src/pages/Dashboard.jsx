@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink, useNavigate } from 'react-router-dom'
 import Card from '@/components/Card'
 import { stats } from '@/utils/data'
 import { useAuth } from '@/context/AuthContext'
@@ -78,9 +79,9 @@ export default function Dashboard() {
         <Card className="p-6">
           <h3 className="text-lg font-semibold">روابط سريعة</h3>
           <div className="mt-4 grid gap-3">
-            <a href="/services" className="btn-primary bg-forest-100 text-forest-700 hover:bg-forest-700 hover:text-white transition-colors text-center">طلب خدمة</a>
-            <a href="/products" className="btn-secondary bg-forest-100 text-forest-700 hover:bg-forest-700 hover:text-white transition-colors text-center">تسوق المنتجات</a>
-            <a href="/library" className="btn-primary bg-forest-100 text-forest-700 hover:bg-forest-700 hover:text-white transition-colors text-center">تصفح المكتبة</a>
+            <NavLink to="/services" className="btn-primary bg-forest-100 text-forest-700 hover:bg-forest-700 hover:text-white transition-colors text-center">طلب خدمة</NavLink>
+            <NavLink to="/products" className="btn-secondary bg-forest-100 text-forest-700 hover:bg-forest-700 hover:text-white transition-colors text-center">تسوق المنتجات</NavLink>
+            <NavLink to="/library" className="btn-primary bg-forest-100 text-forest-700 hover:bg-forest-700 hover:text-white transition-colors text-center">تصفح المكتبة</NavLink>
           </div>
         </Card>
       </section>

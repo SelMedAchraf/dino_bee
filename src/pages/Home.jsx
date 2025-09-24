@@ -50,7 +50,7 @@ export default function Home() {
                   <div>
                     <label className="label text-white/90 text-right" htmlFor="email">البريد الإلكتروني</label>
                     <input id="email" type="email" className="input" aria-invalid={!!loginForm.formState.errors.email} {...loginForm.register('email', { required: 'البريد الإلكتروني مطلوب' })} />
-                    {loginForm.formState.errors.email && <p className="mt-1 text-sm text-red-400" role="alert">{loginForm.formState.errors.email.message}</p>}
+                    {loginForm.formState.errors.email && <p className="mt-1 text-sm text-red-700" role="alert">{loginForm.formState.errors.email.message}</p>}
                   </div>
                   <div>
                     <label className="label text-white/90 text-right" htmlFor="password">كلمة المرور</label>
@@ -69,25 +69,25 @@ export default function Home() {
                 <form onSubmit={signupForm.handleSubmit(onSignup)} className="mt-4 grid gap-3">
                   <div className='grid grid-cols-2 gap-3'>
                     <div>
-                      <label className="label text-white/90 text-right" htmlFor="name">اللقب</label>
-                      <input id="name" className="input" aria-invalid={!!signupForm.formState.errors.name} {...signupForm.register('name', { required: 'اللقب مطلوب' })} />
-                      {signupForm.formState.errors.name && <p className="mt-1 text-sm text-red-600" role="alert">{signupForm.formState.errors.name.message}</p>}
+                      <label className="label text-white/90 text-right" htmlFor="name">الاسم</label>
+                      <input id="name" className="input" aria-invalid={!!signupForm.formState.errors.name} {...signupForm.register('name', { required: 'الاسم مطلوب' })} />
+                      {signupForm.formState.errors.name && <p className="mt-1 text-sm text-red-700" role="alert">{signupForm.formState.errors.name.message}</p>}
                     </div>
                     <div>
-                      <label className="label text-white/90 text-right" htmlFor="name">الاسم</label>
-                      <input id="lastname" className="input" aria-invalid={!!signupForm.formState.errors.lastName} {...signupForm.register('lastName', { required: 'الاسم مطلوب' })} />
-                      {signupForm.formState.errors.lastname && <p className="mt-1 text-sm text-red-600" role="alert">{signupForm.formState.errors.lastName.message}</p>}
+                      <label className="label text-white/90 text-right" htmlFor="lastName">اللقب</label>
+                      <input id="lastName" className="input" aria-invalid={!!signupForm.formState.errors.lastName} {...signupForm.register('lastName', { required: 'اللقب مطلوب' })} />
+                      {signupForm.formState.errors.lastName && <p className="mt-1 text-sm text-red-700" role="alert">{signupForm.formState.errors.lastName.message}</p>}
                     </div>
                   </div>
                   <div>
-                    <label className="label text-white/90 text-right" htmlFor="email">البريد الإلكتروني</label>
-                    <input id="email" type="email" className="input" aria-invalid={!!signupForm.formState.errors.email} {...signupForm.register('email', { required: 'البريد الإلكتروني مطلوب' })} />
+                    <label className="label text-white/90 text-right" htmlFor="email2">البريد الإلكتروني</label>
+                    <input id="email2" type="email" className="input" aria-invalid={!!signupForm.formState.errors.email} {...signupForm.register('email', { required: 'البريد الإلكتروني مطلوب' })} />
                     {signupForm.formState.errors.email && <p className="mt-1 text-sm text-red-700" role="alert">{signupForm.formState.errors.email.message}</p>}
                   </div>
                   <div className='grid grid-cols-2 gap-3'>
                     <div>
-                      <label className="label text-white/90 text-right" htmlFor="password">كلمة المرور</label>
-                      <input id="password" type="password" className="input" aria-invalid={!!signupForm.formState.errors.password} {...signupForm.register('password', { required: 'كلمة المرور مطلوبة', minLength: { value: 6, message: 'الحد الأدنى 6 حروف' } })} />
+                      <label className="label text-white/90 text-right" htmlFor="password2">كلمة المرور</label>
+                      <input id="password2" type="password" className="input" aria-invalid={!!signupForm.formState.errors.password} {...signupForm.register('password', { required: 'كلمة المرور مطلوبة', minLength: { value: 6, message: 'الحد الأدنى 6 حروف' } })} />
                       {signupForm.formState.errors.password && <p className="mt-1 text-sm text-red-700" role="alert">{signupForm.formState.errors.password.message}</p>}
                     </div>
                     <div>
